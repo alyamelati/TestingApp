@@ -4,5 +4,5 @@ data class Courses_Data(
     val category_title: String,
     val course_title: String,
     val course_image: Int,
-    val course_link: String
+    val course_link: Int
 ):java.io.Serializable

@@ -1,29 +1,14 @@
 package com.test.testingapp
 
-import android.content.pm.ActivityInfo
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
-import android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-import android.webkit.JavascriptInterface
-import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.widget.FrameLayout
 import android.widget.MediaController
-import android.widget.ProgressBar
 import android.widget.Toast
 import android.widget.VideoView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.appbar.MaterialToolbar
 
-class Video_Learning : AppCompatActivity() {
+class Video_Learningelephant : AppCompatActivity() {
     var simpleVideoView: VideoView? = null
 
     // declaring a null variable for MediaController
@@ -31,7 +16,7 @@ class Video_Learning : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_learning)
+        setContentView(R.layout.activity_videoel_learning)
         if (supportActionBar != null) {
             supportActionBar!!.hide()
         }

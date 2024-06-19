@@ -1,29 +1,20 @@
 package com.test.testingapp
 
-import android.app.Application
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.test.testingapp.databinding.FragmentHomeBinding
 import kotlin.collections.ArrayList
 
 private const val arg_courseCateg: String = "courseCategory"
 private const val arg_courseTitle: String = "courseTitle"
 private const val arg_courseImage = "courseImage"
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), Adapter_Courses.onItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var coursesAdapter: Adapter_Courses
@@ -62,9 +53,7 @@ class HomeFragment : Fragment() {
     ): View {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        /*recyclerView = view.findViewById(R.id.courses_list)
-
-        val LayoutManager = LinearLayoutManager(context)
+        /*val LayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = LayoutManager
         recyclerView.itemAnimator = DefaultItemAnimator()
         coursesAdapter = Adapter_Courses(this, list)
@@ -89,11 +78,19 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val courseList = AddCourse_Data.getCourseData()
-        val itemAdapter = Adapter_Courses(courseList)
+        val itemAdapter = Adapter_Courses(courseList, this@HomeFragment)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.courses_list)
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = GridLayoutManager(context, 2)
 
         recyclerView.adapter = itemAdapter
+    }
+
+    override fun onItemClick(position: Int) {
+        when(position){
+            0 -> startActivity(Intent(requireContext(), Video_Learning::class.java))
+            1 -> startActivity(Intent(requireContext(), Video_Learningkoala::class.java))
+            2 -> startActivity(Intent(requireContext(), Video_Learningelephant::class.java))
+        }
     }
 }
