@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import kotlin.collections.ArrayList
 
 private const val arg_courseCateg: String = "courseCategory"
@@ -16,9 +19,14 @@ private const val arg_courseImage = "courseImage"
 
 class HomeFragment : Fragment(), Adapter_Courses.onItemClickListener {
 
+    lateinit var name_greeting: TextView
     private lateinit var recyclerView: RecyclerView
     private lateinit var coursesAdapter: Adapter_Courses
+    private lateinit var btn_logout: Button
     private var list = ArrayList<Courses_Data>()
+
+    private var auth = FirebaseAuth.getInstance()
+
     private lateinit var courseCategory: Array<String>
     private lateinit var courseTitle: Array<String>
     private lateinit var courseImage: Array<Int>
@@ -66,7 +74,7 @@ class HomeFragment : Fragment(), Adapter_Courses.onItemClickListener {
 
     companion object {
         @JvmStatic
-        fun newInstance(course_categ: String, course_title: String) = HomeFragment().apply {
+        fun newInstance(course_categ: String, course_title: String, course_image: String) = HomeFragment().apply {
             arguments = Bundle().apply {
                 putString(arg_courseCateg, course_categ)
                 putString(arg_courseTitle, course_title)
@@ -86,11 +94,17 @@ class HomeFragment : Fragment(), Adapter_Courses.onItemClickListener {
         recyclerView.adapter = itemAdapter
     }
 
+    /*private fun signoutUser(){
+        auth.signOut()
+        startActivity(Intent(context, Login::class.java))
+    }*/
+
     override fun onItemClick(position: Int) {
         when(position){
             0 -> startActivity(Intent(requireContext(), Video_Learning::class.java))
             1 -> startActivity(Intent(requireContext(), Video_Learningkoala::class.java))
             2 -> startActivity(Intent(requireContext(), Video_Learningelephant::class.java))
+            3 -> startActivity(Intent(requireContext(), Video_Learningrabbit::class.java))
         }
     }
 }

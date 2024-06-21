@@ -1,5 +1,6 @@
 package com.test.testingapp
 
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -11,6 +12,7 @@ import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.MediaController
 import android.widget.ProgressBar
@@ -22,12 +24,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.firebase.auth.FirebaseAuth
 
 class Video_Learning : AppCompatActivity() {
-    var simpleVideoView: VideoView? = null
-
-    // declaring a null variable for MediaController
-    var mediaControls: MediaController? = null
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -36,46 +35,17 @@ class Video_Learning : AppCompatActivity() {
             supportActionBar!!.hide()
         }
 
-        // assigning id of VideoView from
-        // activity_main.xml layout file
-        simpleVideoView = findViewById<View>(R.id.videoLearning) as VideoView
+        val videoView = findViewById<VideoView>(R.id.videoLearning)
+        val videoPackage = "android.resource://$packageName/${R.raw.pandavideo}"
+        val uri = Uri.parse(videoPackage)
+        videoView.setVideoURI(uri)
 
-        if (mediaControls == null) {
-            // creating an object of media controller class
-            mediaControls = MediaController(this)
+        val mediaController = MediaController(this)
+        videoView.setMediaController(mediaController)
+        mediaController.setAnchorView(videoView)
 
-            // set the anchor view for the video view
-            mediaControls!!.setAnchorView(this.simpleVideoView)
-        }
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        // set the media controller for video view
-        simpleVideoView!!.setMediaController(mediaControls)
-
-        // set the absolute path of the video file which is going to be played
-        simpleVideoView!!.setVideoURI(
-            Uri.parse("android.resource://"
-                + packageName + "/" + R.raw.pandavideo))
-
-        simpleVideoView!!.requestFocus()
-
-        // starting the video
-        simpleVideoView!!.start()
-
-        // display a toast message
-        // after the video is completed
-        simpleVideoView!!.setOnCompletionListener {
-            Toast.makeText(applicationContext, "Video completed",
-                Toast.LENGTH_LONG).show()
-            true
-        }
-
-        // display a toast message if any
-        // error occurs while playing the video
-        simpleVideoView!!.setOnErrorListener { mp, what, extra ->
-            Toast.makeText(applicationContext, "An Error Occurred " +
-                    "While Playing Video !!!", Toast.LENGTH_LONG).show()
-            false
-        }
     }
     /*private lateinit var webView: WebView
     private lateinit var progressBar: ProgressBar

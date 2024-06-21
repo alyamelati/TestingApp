@@ -43,7 +43,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:navigationIcon="@drawable/baseline_arrow_back_24"
-                        app:title="Video Title"
+                        app:title="Elephant Video"
                         app:titleTextAppearance="@style/title_text"
                         app:titleMarginEnd="50dp"
                         app:titleCentered="true"/>
@@ -62,10 +62,15 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-            <VideoView
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:id="@+id/videoLearning"/>
+                android:layout_height="wrap_content">
+
+                <VideoView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:id="@+id/elephant_video"/>
+            </FrameLayout>
             
             <!--<WebView
                 android:id="@+id/vidLearn_webView"

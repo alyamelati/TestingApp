@@ -21,14 +21,28 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/greeting"
-                style="@style/title_text"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Welcome"
-                android:textSize="30dp" />
+                android:orientation="horizontal"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:id="@+id/greeting"
+                    style="@style/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome"
+                    android:textSize="30dp" />
+                <TextView
+                    android:id="@+id/username_greet"
+                    style="@style/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="30dp" />
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/section_title_courses"
                 android:layout_width="match_parent"

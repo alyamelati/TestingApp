@@ -30,7 +30,14 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(HomeFragment())
                     true
                 }
-
+                R.id.navigation_profile -> {
+                    loadFragment(ProfileFragment())
+                    true
+                }
+                R.id.navigation_quiz -> {
+                    loadFragment(QuizFragment())
+                    true
+                }
                 else -> {
                     loadFragment(HomeFragment())
                     true
