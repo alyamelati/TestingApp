@@ -21,6 +21,10 @@ class RabbitQuiz5 : AppCompatActivity() {
         binding = ActivityRabbitQuiz5Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (supportActionBar != null){
+            supportActionBar!!.hide()
+        }
+
         // Initialize MediaPlayer with the sound resource
         mediaPlayer = MediaPlayer.create(this, R.raw.next_sound)
 

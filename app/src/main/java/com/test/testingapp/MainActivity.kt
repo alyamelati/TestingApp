@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.test.testingapp.databinding.ActivityMainBinding
+import com.test.testingapp.model.Quiz
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +23,18 @@ class MainActivity : AppCompatActivity() {
         if (supportActionBar != null) {
             supportActionBar!!.hide()
         }
-        loadFragment(HomeFragment())
+
+
+        var tab: String? = intent.getStringExtra("TAB")
+        // tab = QUIZ -> QuizFragment
+        // tab != QUIZ -> HomeFragment
+        if ("QUIZ".equals(tab)){
+            loadFragment(QuizFragment())
+        }
+        else {
+            loadFragment(HomeFragment())
+        }
+
         bottomNav = findViewById(R.id.bottomNav) as BottomNavigationView
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {

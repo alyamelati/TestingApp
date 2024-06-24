@@ -20,12 +20,16 @@ class QuizQuestion1 : AppCompatActivity() {
         binding = ActivityQuizQuestion1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (supportActionBar != null){
+            supportActionBar!!.hide()
+        }
+
         // Initialize MediaPlayer with the sound resource
         mediaPlayer = MediaPlayer.create(this, R.raw.next_sound)
 
         // Handle back button click
         binding.backArrow.setOnClickListener {
-            loadFragment(QuizFragment())
+            onBackPressed()
         }
 
         // Handle radio button selection
@@ -70,7 +74,6 @@ class QuizQuestion1 : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        // Release the MediaPlayer resource when activity is destroyed
         if (this::mediaPlayer.isInitialized) {
             mediaPlayer.release()
         }

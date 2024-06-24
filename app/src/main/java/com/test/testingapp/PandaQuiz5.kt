@@ -20,12 +20,16 @@ class PandaQuiz5 : AppCompatActivity() {
         binding = ActivityPandaQuiz5Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (supportActionBar != null){
+            supportActionBar!!.hide()
+        }
+
         // Initialize MediaPlayer with the sound resource
         mediaPlayer = MediaPlayer.create(this, R.raw.next_sound)
 
         // Handle back button click
         binding.backArrow.setOnClickListener {
-            loadFragment(QuizFragment())
+            onBackPressed()
         }
 
         // Handle radio button selection
@@ -40,7 +44,9 @@ class PandaQuiz5 : AppCompatActivity() {
                 // Play the sound
                 mediaPlayer.start()
 
+                // Start QuizResult activity
                 val intent = Intent(this, QuizResult::class.java)
+
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Please select an answer", Toast.LENGTH_SHORT).show()

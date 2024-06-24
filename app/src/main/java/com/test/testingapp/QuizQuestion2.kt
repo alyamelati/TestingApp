@@ -20,6 +20,10 @@ class QuizQuestion2 : AppCompatActivity() {
         binding = ActivityQuizQuestion2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (supportActionBar != null){
+            supportActionBar!!.hide()
+        }
+
         // Initialize MediaPlayer with the sound resource
         mediaPlayer = MediaPlayer.create(this, R.raw.next_sound)
 

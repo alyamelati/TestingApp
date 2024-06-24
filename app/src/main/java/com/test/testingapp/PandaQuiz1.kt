@@ -20,6 +20,10 @@ class PandaQuiz1 : AppCompatActivity() {
         binding = ActivityPandaQuiz1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        if (supportActionBar != null){
+            supportActionBar!!.hide()
+        }
+
         // Initialize MediaPlayer with the sound resource
         mediaPlayer = MediaPlayer.create(this, R.raw.next_sound)
 
@@ -42,6 +46,7 @@ class PandaQuiz1 : AppCompatActivity() {
 
                 val intent = Intent(this, PandaQuiz2::class.java)
                 startActivity(intent)
+
             } else {
                 Toast.makeText(this, "Please select an answer", Toast.LENGTH_SHORT).show()
             }

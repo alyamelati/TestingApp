@@ -19,6 +19,9 @@ class PandaQuiz3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPandaQuiz3Binding.inflate(layoutInflater)
         setContentView(binding.root)
+        if (supportActionBar != null){
+            supportActionBar!!.hide()
+        }
 
         // Initialize MediaPlayer with the sound resource
         mediaPlayer = MediaPlayer.create(this, R.raw.next_sound)
