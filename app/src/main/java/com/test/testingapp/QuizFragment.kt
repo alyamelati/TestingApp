@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth
  * Use the [QuizFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class QuizFragment : Fragment()/*, Adapter_Quiz.onItemClickListener*/ {
+class QuizFragment : Fragment(), Adapter_Quiz.onItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var coursesAdapter: Adapter_Courses
     private var list = ArrayList<Quiz_Data>()
@@ -83,7 +83,7 @@ class QuizFragment : Fragment()/*, Adapter_Quiz.onItemClickListener*/ {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val quizList = AddQuiz_Data.getQuizData()
-        val itemAdapter = Adapter_Quiz(quizList)
+        val itemAdapter = Adapter_Quiz(quizList, this@QuizFragment)
 
         val recyclerView: RecyclerView = view.findViewById(R.id.quiz_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
@@ -96,12 +96,12 @@ class QuizFragment : Fragment()/*, Adapter_Quiz.onItemClickListener*/ {
         startActivity(Intent(context, Login::class.java))
     }*/
 
-    /*override fun onItemClick(position: Int) {
+    override fun onItemClick(position: Int) {
         when(position){
-            0 -> startActivity(Intent(requireContext(), Video_Learning::class.java))
-            1 -> startActivity(Intent(requireContext(), Video_Learningkoala::class.java))
-            2 -> startActivity(Intent(requireContext(), Video_Learningelephant::class.java))
-            3 -> startActivity(Intent(requireContext(), Video_Learningrabbit::class.java))
+            0 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
+            1 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
+            2 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
+            3 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
         }
-    }*/
+    }
 }
