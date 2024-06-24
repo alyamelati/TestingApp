@@ -52,17 +52,6 @@ class PandaQuiz2 : AppCompatActivity() {
         }
 
         // Handle bottom navigation clicks
-        binding.navHome.setOnClickListener {
-            loadFragment(HomeFragment())
-        }
-
-        binding.navQuiz.setOnClickListener {
-            loadFragment(QuizFragment())
-        }
-
-        binding.navProfile.setOnClickListener {
-            loadFragment(ProfileFragment())
-        }
     }
 
     private fun loadFragment(fragment: Fragment) {
