@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.test.testingapp.databinding.ActivityQuizResultBinding
 
-class QuizResultActivity : AppCompatActivity() {
+class QuizResult : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuizResultBinding
 
