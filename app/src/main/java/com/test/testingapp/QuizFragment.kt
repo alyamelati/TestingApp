@@ -98,10 +98,10 @@ class QuizFragment : Fragment(), Adapter_Quiz.onItemClickListener {
 
     override fun onItemClick(position: Int) {
         when(position){
-            0 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
-            1 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
+            0 -> startActivity(Intent(requireContext(), PandaQuiz1::class.java))
+            1 -> startActivity(Intent(requireContext(), KoalaQuiz1::class.java))
             2 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
-            3 -> startActivity(Intent(requireContext(), QuizQuestion1::class.java))
+            3 -> startActivity(Intent(requireContext(), RabbitQuiz1::class.java))
         }
     }
 }

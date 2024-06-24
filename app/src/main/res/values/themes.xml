@@ -15,7 +15,6 @@
         <item name="android:navigationBarColor">@color/blue_bg</item>
     </style>
 
-    <color name="grey">#F4F4F4</color>
     <color name="blue_bg">#0455BF</color>
     <color name="blue_title">#202244</color>
     <color name="yellow_icon">#FAC840</color>
