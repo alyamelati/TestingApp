@@ -16,67 +16,67 @@
         tools:targetApi="31">
         <activity
             android:name=".RabbitQuiz5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RabbitQuiz4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RabbitQuiz3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RabbitQuiz2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RabbitQuiz1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".KoalaQuiz5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".KoalaQuiz4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".KoalaQuiz3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".KoalaQuiz2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".KoalaQuiz1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".PandaQuiz5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".PandaQuiz4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".PandaQuiz3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".PandaQuiz2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".PandaQuiz1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuizResult"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuizQuestion5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuizQuestion4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuizQuestion3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuizQuestion2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".QuizQuestion1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Login"
             android:exported="true">
@@ -88,29 +88,29 @@
         </activity>
         <activity
             android:name=".Register"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".HomeFragment"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Video_Learning"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Video_Learningkoala"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Video_Learningelephant"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Video_Learningrabbit"
-            android:exported="false"
+            android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/app_name" />
 
         <meta-data
