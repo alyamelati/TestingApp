@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -25,8 +26,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.firebase.auth.FirebaseAuth
+import com.test.testingapp.databinding.ActivityPandaQuiz1Binding
+import com.test.testingapp.databinding.ActivityVideoLearningBinding
 
 class Video_Learning : AppCompatActivity() {
+
+    private lateinit var binding: ActivityVideoLearningBinding
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -34,6 +39,9 @@ class Video_Learning : AppCompatActivity() {
         if (supportActionBar != null) {
             supportActionBar!!.hide()
         }
+
+        binding = ActivityVideoLearningBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val videoView = findViewById<VideoView>(R.id.videoLearning)
         val videoPackage = "android.resource://$packageName/${R.raw.pandavideo}"
@@ -43,6 +51,9 @@ class Video_Learning : AppCompatActivity() {
         val mediaController = MediaController(this)
         videoView.setMediaController(mediaController)
         mediaController.setAnchorView(videoView)
+        binding.backArrow.setOnClickListener {
+            onBackPressed()
+        }
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 

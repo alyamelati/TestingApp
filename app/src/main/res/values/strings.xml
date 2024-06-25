@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TestingApp</string>
+    <string name="app_name">Critter Kids</string>
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
     <string name="title_quiz">Quiz</string>

@@ -7,8 +7,11 @@ import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import com.test.testingapp.databinding.ActivityVideorabLearningBinding
 
 class Video_Learningrabbit : AppCompatActivity() {
+
+    private lateinit var binding: ActivityVideorabLearningBinding
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -16,6 +19,9 @@ class Video_Learningrabbit : AppCompatActivity() {
         if (supportActionBar != null) {
             supportActionBar!!.hide()
         }
+
+        binding = ActivityVideorabLearningBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val videoView = findViewById<VideoView>(R.id.rabbit_video)
         val videoPackage = "android.resource://$packageName/${R.raw.rabbitvideo}"
@@ -25,6 +31,11 @@ class Video_Learningrabbit : AppCompatActivity() {
         val mediaController = MediaController(this)
         videoView.setMediaController(mediaController)
         mediaController.setAnchorView(videoView)
+
+        binding.backArrow.setOnClickListener {
+            onBackPressed()
+        }
+
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
     /*private lateinit var webView: WebView

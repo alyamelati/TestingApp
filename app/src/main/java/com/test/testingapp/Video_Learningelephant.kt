@@ -7,8 +7,12 @@ import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import com.test.testingapp.databinding.ActivityVideoLearningBinding
+import com.test.testingapp.databinding.ActivityVideoelLearningBinding
 
 class Video_Learningelephant : AppCompatActivity() {
+
+    private lateinit var binding: ActivityVideoelLearningBinding
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -16,6 +20,9 @@ class Video_Learningelephant : AppCompatActivity() {
         if (supportActionBar != null) {
             supportActionBar!!.hide()
         }
+
+        binding = ActivityVideoelLearningBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val videoView = findViewById<VideoView>(R.id.elephant_video)
         val videoPackage = "android.resource://$packageName/${R.raw.elephantvideo}"
@@ -25,6 +32,10 @@ class Video_Learningelephant : AppCompatActivity() {
         val mediaController = MediaController(this)
         videoView.setMediaController(mediaController)
         mediaController.setAnchorView(videoView)
+
+        binding.backArrow.setOnClickListener {
+            onBackPressed()
+        }
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
