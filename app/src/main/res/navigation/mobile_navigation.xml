@@ -1,26 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
-    <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.test.testingapp.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
-        android:id="@+id/navigation_quiz"
-        android:name="com.test.testingapp.QuizFragment"
-        android:label="@string/title_quiz"
-        tools:layout="@layout/fragment_quiz" />
-
-    <fragment
-        android:id="@+id/navigation_profile"
-        android:name="com.test.testingapp.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
-
-</navigation>
+version https://git-lfs.github.com/spec/v1
+oid sha256:204a5de8beb5caafa6ff282fcd6f447c1a007027d1ed0f4cbe017fab64553a9d
+size 944
