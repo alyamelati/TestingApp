@@ -1,12 +1,3 @@
-package com.test.testingapp.model;
-
-import java.io.Serializable;
-import java.util.List;
-
-public class Quiz implements Serializable {
-    public String image;
-    public String soal;
-    public List<String> daftarPilihan;
-    public Integer jawabanBenar;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4cc242893a6d254942582a3efb547a95d7835386a501b6a293534235ce12434
+size 257

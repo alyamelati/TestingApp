@@ -1,24 +1,3 @@
-package com.test.testingapp
-
-import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.ext.junit.runners.AndroidJUnit4
-
-import org.junit.Test
-import org.junit.runner.RunWith
-
-import org.junit.Assert.*
-
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-@RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
-    @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.test.testingapp", appContext.packageName)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:247c4ba34ce034dcfe9732b23592cb6752441d66d3078e27d33057ff4f2fb38d
+size 665

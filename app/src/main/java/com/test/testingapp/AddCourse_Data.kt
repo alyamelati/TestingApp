@@ -1,18 +1,3 @@
-package com.test.testingapp
-
-import kotlin.collections.ArrayList
-
-object AddCourse_Data {
-    fun getCourseData(): ArrayList<Courses_Data>{
-        val courseList = ArrayList<Courses_Data>()
-        val course1=Courses_Data("Herbivore", "Panda", R.drawable.baby_panda)
-        courseList.add(course1)
-        val course2=Courses_Data("Herbivore", "Koala", R.drawable.baby_koala)
-        courseList.add(course2)
-        val course3=Courses_Data("Herbivore", "Elephant", R.drawable.baby_elephant)
-        courseList.add(course3)
-        val course4=Courses_Data("Herbivore", "Rabbit", R.drawable.baby_rabbit)
-        courseList.add(course4)
-        return courseList
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f719ee49bda8ce283a74bdc6c494f9a3b82a43cfaf103873d64517c3d5871b7
+size 854

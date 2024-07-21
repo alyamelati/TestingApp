@@ -1,29 +1,3 @@
-{
-  "project_info": {
-    "project_number": "740426462594",
-    "project_id": "testingapp-454cd",
-    "storage_bucket": "testingapp-454cd.appspot.com"
-  },
-  "client": [
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:740426462594:android:eef49cf2b62a2745e1cb9b",
-        "android_client_info": {
-          "package_name": "com.test.testingapp"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCYSvDM_qjDfxWeIfaQSUsN0AnLodb252Q"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    }
-  ],
-  "configuration_version": "1"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d81e44c964f5a5e1c2b774505a50e8ca396fc087434eedc833be00d42bc37f38
+size 771

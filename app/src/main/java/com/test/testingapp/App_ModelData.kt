@@ -1,10 +1,3 @@
-package com.test.testingapp
-
-data class App_ModelData(
-    val userId: String? = null,
-    val name: String? = null,
-    val email: String? = null,
-    val profile: String? = null,
-    val video_title: String? = null,
-    val video_link: String? = null,
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1df1d8a568627750cae46db88f6da102015173a6a52e0553a5fec684c0523270
+size 191

@@ -1,17 +1,3 @@
-package com.test.testingapp
-
-import org.junit.Test
-
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d51c9e7b4a60d894a911e9494d27401e52bd00187afb98d0cac2cd94bb42c9c
+size 343

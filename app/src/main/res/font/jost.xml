@@ -1,7 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:fontProviderAuthority="com.google.android.gms.fonts"
-        app:fontProviderPackage="com.google.android.gms"
-        app:fontProviderQuery="Jost"
-        app:fontProviderCerts="@array/com_google_android_gms_fonts_certs">
-</font-family>
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a2ce8de05ee167c92e5607dd2896c6cb7f6a0c3e0b6c49ede380c58ccb9e1c3
+size 353

@@ -1,8 +1,3 @@
-<resources>
-    <string name="app_name">Critter Kids</string>
-    <string name="title_home">Home</string>
-    <string name="title_profile">Profile</string>
-    <string name="title_quiz">Quiz</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e99fa9fc98991502a6633370852436cab5f52b3493eb726e71b335552897ad7
+size 340
